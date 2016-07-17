@@ -15,6 +15,23 @@
 #include <iostream>
 using namespace std;
 
+void tenRun(int arr[10],int size){
+    for (int i =0,multiple = 3; i < size ; i++) {
+        if (arr[i] % 10 == 0) {
+            multiple = arr[i];
+        }
+        if (multiple != 3) {
+            arr[i] = multiple;
+        }
+    }
+    cout << "Now displaying the contents of the array after processing : " << endl;
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+
 int main() {
     int arr[10];
     srand(time(0));
