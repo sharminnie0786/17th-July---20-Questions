@@ -13,6 +13,25 @@
 #include <iostream>
 using namespace std;
 
+bool getValue(int arr[],int size){
+    bool value = true;
+    int count = 0;
+    for(int i = 0; i < size ; i++){
+        if(arr[i] == 3){
+            count++;
+            if(i+1 < size && arr[i+1] == 3){
+                value = false;
+            }
+        }
+    }
+    if(value == false || count != 3){
+        return false;
+    }
+    else{
+        return true;
+    }
+}
+
 int main() {
     int arr[10] = {1, 1, 3, 3, 1, 3, 3, 3, 1, 1};
 //    srand(time(0));
